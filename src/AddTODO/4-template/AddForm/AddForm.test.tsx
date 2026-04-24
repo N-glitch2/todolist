@@ -26,12 +26,12 @@ describe("AddForm component", () => {
 describe("AddForm submit button", () => {
   describe("basic", () => {
     it("should call the onCLick handler when submit button is clicked", () => {
-      const onSubmitClick = jest.fn();
-      const { button } = setup({ onSubmitClick: onSubmitClick });
-      expect(onSubmitClick).toHaveBeenCalled();
+     const onSubmitClick = jest.fn();
+     const { button } = setup({ onSubmitClick: onSubmitClick });
+   expect(onSubmitClick).not.toHaveBeenCalled();
 
-      fireEvent.click(button);
-      expect(onSubmitClick).toHaveBeenCalled();
+  fireEvent.click(button);
+   expect(onSubmitClick).toHaveBeenCalled();
     });
   });
 });
